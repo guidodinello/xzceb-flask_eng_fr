@@ -38,8 +38,8 @@ class Language(enum.Enum):
 def translate(text : str, source : Language, target : Language) -> str :
     """Translates text from one language to another."""
     
-    if text is None:
-        return "Method failed with status code 400: Bad Request, text must be provided."
+    if text is None: 
+        return None
 
     try:
         translation = language_translator.translate(
